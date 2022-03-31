@@ -151,6 +151,11 @@ canvas {
 .credits-item {
   flex-basis: 50%;
 }
+.progetto-testo a {
+  font-family: unica;
+  text-decoration: underline;
+  font-size: 23px;
+}
 
 /* ------------- */
 
@@ -199,7 +204,6 @@ canvas {
 }
 .links-s {
   color: rgb(230, 122, 0);
-  text-decoration-color: blue;
 }
 .links-u {
   color: rgb(30, 126, 236);
@@ -214,6 +218,14 @@ canvas {
 .altri-links {
   margin-top: 14px;
 }
+.orange {
+  color: rgb(230, 122, 0);
+}
+.blue {
+  color: rgb(30, 126, 236);
+}
+
+/* -------------------------------------------------------- */
 
 @media (max-width: 768px) {
   #navbar {
