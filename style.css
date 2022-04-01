@@ -18,6 +18,9 @@ a {
 canvas {
   display: block;
 }
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
 
 #canvas {
   display: block;
@@ -130,24 +133,53 @@ canvas {
 
 #progetto-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   margin-top: 90px;
+  padding: 0 24px;
+  height: 90vh;
 }
 .progetto-testo {
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
   font-size: 24px;
+  padding-right: 18px;
+  justify-content: space-between;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-#footer {
-  font-size: 18px;
-  margin-bottom: 30px;
+.progetto-testo::-webkit-scrollbar {
+  display: none;
 }
 #credits {
   font-family: unica;
-  display: flex;
   flex-direction: row;
-  margin: 50px 0 70px 0;
+  padding: 0 9px;
+  font-size: 24px;
+  flex-basis: 25%;
 }
+#contatti {
+  flex-basis: 25%;
+  font-family: unica;
+  padding-left: 18px;
+  font-size: 24px;
+}
+#contatti a {
+  text-decoration: underline 2px;
+  text-underline-offset: 0.1em;
+}
+#contatti a:hover {
+  opacity: 50%;
+  transition: 0.1s;
+}
+#footer {
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 .credits-item {
   flex-basis: 50%;
 }
@@ -155,6 +187,12 @@ canvas {
   font-family: unica;
   text-decoration: underline;
   font-size: 23px;
+}
+.prog-txt {
+  line-height: 27px;
+}
+.sottotitolo {
+  margin-bottom: 10px;
 }
 
 /* ------------- */
