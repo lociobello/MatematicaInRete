@@ -179,6 +179,11 @@ img {
   margin-top: 50px;
   margin-bottom: 30px;
 }
+#footer a {
+  font-size: 18px;
+  font-family: serif;
+  text-underline-offset: 0.1em;
+}
 
 .credits-item {
   flex-basis: 50%;
@@ -209,7 +214,10 @@ img {
 #libro-testo {
   flex-basis: 33.3%;
   padding: 0 8px;
+  margin-bottom: 40px;
+  overflow-y: scroll;
 }
+
 #libro-altri {
   flex-basis: 33.3%;
   padding-left: 16px;

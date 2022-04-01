@@ -84,6 +84,7 @@ function draw() {
   rotate(random(0, 350));
   translate(randomXPag, randomYPag);
   image(pagine[randomPag], 0, 0, pagine[randomPag].width / 1.6, pagine[randomPag].height / 1.6);
+  pop();
 }
 
 function mouseClicked() {
