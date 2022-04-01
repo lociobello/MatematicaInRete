@@ -2,6 +2,7 @@ let canvas;
 
 let scientifico;
 let umanistico;
+let pagine;
 
 function preload() {
   s1 = loadImage("assets/copertine/nuove/low-res/S1.png");
@@ -16,8 +17,16 @@ function preload() {
   u4 = loadImage("assets/copertine/nuove/low-res/U4.png");
   u5 = loadImage("assets/copertine/nuove/low-res/U5.png");
 
+  pag1 = loadImage("assets/pagine/low-res/pag1.png");
+  pag2 = loadImage("assets/pagine/low-res/pag2.png");
+  pag3 = loadImage("assets/pagine/low-res/pag3.png");
+  pag4 = loadImage("assets/pagine/low-res/pag4.png");
+  pag5 = loadImage("assets/pagine/low-res/pag5.png");
+  pag6 = loadImage("assets/pagine/low-res/pag6.png");
+
   scientifico = [s1, s2, s3, s4, s5];
   umanistico = [u1, u2, u3, u4, u5];
+  pagine = [pag1, pag2, pag3, pag4, pag5, pag6];
 }
 
 function setup() {
@@ -33,10 +42,16 @@ function draw() {
 
   let randomXS = random(0, width / 2);
   let randomYS = random(0, height / 2);
+
   let randomXU = random(0, width / 2);
   let randomYU = random(0, height / 2);
+
+  let randomXPag = random(0, width / 2);
+  let randomYPag = random(0, height / 2);
+
   let randomS = round(random(0, 4));
   let randomU = round(random(0, 4));
+  let randomPag = round(random(0, 5));
 
   push();
   translate(width / 2, height / 2);
@@ -63,9 +78,14 @@ function draw() {
     umanistico[randomU].height / 1.6
   );
   pop();
+
+  push();
+  translate(width / 2, height / 2);
+  rotate(random(0, 350));
+  translate(randomXPag, randomYPag);
+  image(pagine[randomPag], 0, 0, pagine[randomPag].width / 1.6, pagine[randomPag].height / 1.6);
 }
 
-//
 function mouseClicked() {
   background(255);
 }
