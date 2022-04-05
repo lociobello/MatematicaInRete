@@ -135,7 +135,7 @@ img {
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
-  margin-top: 90px;
+  margin-top: 10vh;
   padding: 0 24px;
   height: 90vh;
 }
@@ -203,9 +203,10 @@ img {
 /* ------------- */
 
 #libro-container {
-  margin-top: 90px;
+  margin-top: 10vh;
   padding: 0 24px;
   display: flex;
+  height: 90vh;
 }
 #libro-cover {
   flex-basis: 33.3%;
@@ -214,7 +215,11 @@ img {
 #libro-testo {
   flex-basis: 33.3%;
   padding: 0 8px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  overflow-y: scroll;
+}
+#libro-testo::-webkit-scrollbar {
+  display: none;
 }
 
 #libro-altri {
