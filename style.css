@@ -2,11 +2,25 @@
   font-family: unica;
   src: url("assets/fonts/NeueHaasUnicaW1G.otf");
 }
+@font-face {
+  font-family: helvetica;
+  src: url("assets/fonts/helveticaNeue/HelveticaNeue-01.ttf");
+}
 
 html,
 body {
   margin: 0;
   padding: 0;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+  font-size: 20px;
+  font-family: helvetica;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 p {
   margin: 0;
@@ -20,6 +34,35 @@ canvas {
 }
 img {
   image-rendering: -webkit-optimize-contrast;
+}
+ol {
+  margin: 0;
+  padding-left: 20px;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 0;
+  margin-bottom: -1px;
+  cursor: pointer;
+  outline: none;
+  background-image: url("assets/dropdown-arrow.svg"); /* Path to your custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Adjust position as needed */
+  background-size: 18px; /* Adjust size of the arrow */
+
+  padding-right: 36px; /* Ensures space for the custom arrow */
+}
+.select:after {
+  background-image: url(assets/dropdown-arrow.svg);
+}
+
+button {
+  cursor: pointer;
 }
 
 #canvas {
@@ -42,7 +85,7 @@ img {
   height: 100vh;
 }
 .home-link {
-  font-family: unica;
+  font-family: helvetica;
   text-decoration: underline 3px;
   text-underline-offset: 0.1em;
 }
@@ -51,56 +94,87 @@ img {
   transition: 0.1s;
 }
 
-/* ----------------- */
+/* ------------------------- HOME ----------------- */
+
+#navbar-container {
+  background-color: white;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  height: auto;
+}
 
 #navbar {
-  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  top: 16px;
-  width: 98%;
-  padding: 0 1%;
   z-index: 5;
+  border-bottom: 1px solid black;
+  margin: 10px 20px 0px 20px;
+  background-color: white;
 }
 .nav-btn {
-  font-size: 22px;
-  border-radius: 100px;
-  border: 1px solid black;
-  padding: 4px 20px 7px 20px;
+  font-size: 20px;
+  padding: 8px 12px 8px 12px;
   background-color: white;
-  font-family: unica;
+  font-family: helvetica;
   text-decoration: none;
   color: black;
+  flex-grow: 1;
+  border: 1px solid transparent;
+  border-bottom: none;
+  margin-left: -1px;
 }
-#gruppo-dx {
-  transform: translate(0, 5px);
-}
-#gruppo-dx .nav-btn {
-  margin: 0 0 0 5px;
-}
-.nav-btn:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-.nav-active {
-  background-color: black;
-  color: white;
+.nav-btn-app {
+  font-size: 20px;
+  padding: 8px 12px 8px 12px;
+  background-color: white;
+  font-family: helvetica;
+  text-decoration: none;
+  color: black;
+  border: 1px solid transparent;
+  border-bottom: none;
+  margin-left: -1px;
 }
 
-/* -------------------- */
+.active {
+  border: 1px solid black;
+  border-bottom: none;
+  z-index: 6;
+}
+
+.nav-btn:hover {
+  border: 1px solid black;
+  border-bottom: none;
+  z-index: 7;
+}
+
+/* -------------------- LISTA ------------------- */
+
+.page-container {
+  margin: 60px 20px 20px 20px;
+}
+
+.title {
+  font-family: helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+.title-block {
+  height: 100px;
+}
 
 #lista-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 90px;
-  padding: 0 24px;
 }
 .riga {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid black;
 }
 .fila-copertine {
   display: flex;
@@ -120,51 +194,48 @@ img {
   cursor: pointer;
 }
 .lista-titolo {
-  font-size: 30px;
-  font-family: unica;
-  margin-bottom: 12px;
+  font-size: 20px;
+  font-family: helvetica;
+  margin: 6px 0 20px 0;
+  font-weight: 400;
 }
 #riga-u {
   margin-top: 24px;
   margin-bottom: 60px;
 }
 
-/* ------------- */
+/* ------------------------- INFO ---------------------- */
 
 #progetto-container {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  margin-top: 10vh;
+  margin-top: 65px;
   padding: 0 24px;
-  height: 90vh;
 }
 .progetto-testo {
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
-  font-size: 24px;
+  font-size: 20px;
   padding-right: 18px;
-  justify-content: space-between;
   overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .progetto-testo::-webkit-scrollbar {
   display: none;
 }
 #credits {
-  font-family: unica;
+  font-family: serif;
   flex-direction: row;
   padding: 0 9px;
-  font-size: 24px;
+  font-size: 20px;
   flex-basis: 25%;
 }
 #contatti {
   flex-basis: 25%;
-  font-family: unica;
+  font-family: helvetica;
   padding-left: 18px;
-  font-size: 24px;
+  font-size: 20px;
 }
 #contatti a {
   text-decoration: underline 2px;
@@ -175,46 +246,39 @@ img {
   transition: 0.1s;
 }
 #footer {
-  font-size: 18px;
-  margin-top: 50px;
+  font-size: 16px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 #footer a {
-  font-size: 18px;
   font-family: serif;
   text-underline-offset: 0.1em;
 }
 
 .credits-item {
   flex-basis: 50%;
+  margin-bottom: 24px;
 }
 .progetto-testo a {
-  font-family: unica;
+  /* font-family: helvetica; */
   text-decoration: underline;
-  font-size: 23px;
-}
-.prog-txt {
-  line-height: 27px;
 }
 .sottotitolo {
   margin-bottom: 10px;
 }
 
-/* ------------- */
+/* -------------------- PAGINA LIBRO ------------------- */
 
 #libro-container {
-  margin-top: 10vh;
-  padding: 0 24px;
+  margin: 64px 20px 20px 20px;
   display: flex;
-  height: 90vh;
+  gap: 20px;
 }
 #libro-cover {
   flex-basis: 33.3%;
-  padding-right: 16px;
 }
 #libro-testo {
-  flex-basis: 33.3%;
-  padding: 0 8px;
+  flex-basis: 66.67%;
   padding-bottom: 40px;
   overflow-y: scroll;
 }
@@ -222,27 +286,28 @@ img {
   display: none;
 }
 
-#libro-altri {
-  flex-basis: 33.3%;
-  padding-left: 16px;
-}
 .libro-img {
-  max-height: 85vh;
+  max-height: 100vh;
   max-width: 100%;
+}
+.libro-top {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: space-between;
+}
+.button {
+  width: fit-content;
 }
 .titolo {
   margin: 0;
-  font-family: unica;
+  font-family: helvetica;
   font-weight: normal;
   line-height: 40px;
   transform: translate(0, -10px);
 }
-.descrizione {
-  font-size: 24px;
-  margin: 16px 0 0 0;
-}
 .links {
-  font-family: unica;
+  font-family: helvetica;
   font-size: 22px;
   text-decoration: underline 2px;
   text-underline-offset: 0.1em;
@@ -258,13 +323,6 @@ img {
 .links-u {
   color: rgb(30, 126, 236);
 }
-.capitoli {
-  color: black;
-  margin-bottom: 8px;
-  font-family: unica;
-  font-size: 22px;
-  text-decoration: none;
-}
 .altri-links {
   margin-top: 14px;
 }
@@ -274,19 +332,80 @@ img {
 .blue {
   color: rgb(30, 126, 236);
 }
+.button {
+  font-family: helvetica;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 8px 12px;
+  border: 1px solid black;
+}
+.button:hover {
+  background-color: black;
+  color: white;
+  font-weight: 100;
+}
 
-/* -------------------------------------------------------- */
+.libro-descrizione {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 20px;
+  border-top: 1px solid black;
+  margin-top: 12px;
+  padding-top: 8px;
+}
+.libro-info {
+  flex-basis: 50%;
+}
+/* .descrizione {
+  margin-top: 10px;
+} */
+.capitoli {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+/* .capitoli-lista {
+  margin-top: 10px;
+} */
+.appunti-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.nav-select {
+  margin-left: -1px;
+  z-index: 5;
+}
+.numero {
+  width: 41px;
+  display: flex;
+  justify-content: center;
+}
+.num-active-u {
+  background-color: #00a3ff;
+}
+.num-active-s {
+  background-color: #ff7a00;
+}
+.years {
+  display: flex;
+  flex-direction: row;
+}
+.years button.attivo.umanistico {
+  background-color: #00a3ff;
+}
+.years button.attivo.scientifico {
+  background-color: #ff7a00;
+}
+
+.fila-risorse {
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------------------- PHONE ---------------------------- */
+/* --------------------------------------------------------------- */
 
 @media (max-width: 768px) {
-  #navbar {
-    display: none;
-  }
-  #landing {
-    display: none;
-  }
-  #landing-mobile {
-    display: flex;
-    font-size: 40px;
-    text-align: center;
-  }
 }
