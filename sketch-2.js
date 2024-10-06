@@ -16,9 +16,9 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight * 0.75);
   canvas.parent("canvas");
-  background(255);
+  // background(255);
 }
 
 function draw() {
@@ -41,4 +41,8 @@ function draw() {
 
 function mouseClicked() {
   background(255);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight * 0.75);
 }
