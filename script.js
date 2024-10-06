@@ -1,3 +1,5 @@
+//--------APPUNTI DROPDOWN
+
 // Get current page URL to determine active selection
 document.addEventListener("DOMContentLoaded", function () {
   const indirizzoSelect = document.getElementById("indirizzoSelect");
@@ -32,3 +34,43 @@ function navigateToPage(year) {
   const newPage = "appunti-" + indirizzo + "-" + year + ".html";
   window.location.href = newPage;
 }
+
+//---------MOBILE DROPDOWN
+
+// Function to handle navigation
+function navigate(select) {
+  var value = select.value;
+  switch (value) {
+    case "home":
+      window.location.href = "index.html";
+      break;
+    case "appunti":
+      window.location.href = "appunti-lista.html";
+      break;
+    case "risorse":
+      window.location.href = "risorse-lista.html";
+      break;
+    case "info":
+      window.location.href = "info.html";
+      break;
+  }
+}
+
+// Function to set the select option based on the current page
+function setSelectedOption() {
+  var currentPage = window.location.pathname;
+  var select = document.getElementById("navSelect");
+
+  if (currentPage.includes("index.html")) {
+    select.value = "home";
+  } else if (currentPage.includes("appunti-lista.html")) {
+    select.value = "appunti";
+  } else if (currentPage.includes("risorse-lista.html")) {
+    select.value = "risorse";
+  } else if (currentPage.includes("info.html")) {
+    select.value = "info";
+  }
+}
+
+// Call the function when the page loads
+window.onload = setSelectedOption;

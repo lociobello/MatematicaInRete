@@ -20,11 +20,19 @@
         <a class="nav-btn" href="info.html">Info</a>
       </nav>
     </div>
+
+    <div id="navbar-container-mob">
+      <nav id="navbar-mob">
+        <select class="nav-select" id="navSelect" onchange="navigate(this)">
+          <option value="home">Matematica in Rete</option>
+          <option value="appunti">Appunti di Matematica</option>
+          <option value="risorse">Altre risorse</option>
+          <option value="info">Info</option>
+        </select>
+      </nav>
+    </div>
+
     <div id="container-home">
-      <!-- <div id="landing">
-        <a href="appunti-lista.html" class="home-link">Libri</a> e <a href="#" class="home-link">risorse</a> <i>open source</i> sulla matematica<br />per
-        studenti di licei scientifici ed umanistici
-      </div> -->
       <div id="landing-wrap">
         <div id="landing">Libri e risorse <i>open source</i> sulla matematica<br />per studenti di licei scientifici ed umanistici</div>
         <div id="gradient"></div>
@@ -36,7 +44,7 @@
           <div class="home-content-item">
             <div class="home-content-item-half">
               <h1>Appunti di Matematica</h1>
-              <p>
+              <p class="thumb-desc">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus rem sunt aliquam doloribus nesciunt dolorem dolores excepturi quod alias
                 tempora. Aliquid quasi porro voluptas harum magnam voluptate vero nihil praesentium.
               </p>
@@ -48,7 +56,7 @@
           <div class="home-content-item">
             <div class="home-content-item-half">
               <h1>Altre risorse</h1>
-              <p>
+              <p class="thumb-desc">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit vel dolor ullam praesentium non magni harum! Omnis, hic nulla! Id ab,
                 recusandae vitae delectus blanditiis non ad corrupti sapiente molestiae.
               </p>
@@ -60,5 +68,6 @@
     </div>
 
     <script src="sketch-2.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

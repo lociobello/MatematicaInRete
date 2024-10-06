@@ -71,7 +71,7 @@ button {
   cursor: pointer;
 }
 
-/* ------------------------- HOME ----------------- */
+/* ------------------------- HOME ----------------------- */
 
 #navbar-container {
   background-color: white;
@@ -147,6 +147,7 @@ button {
   font-size: 40px;
   margin: 41px 20px 0px 20px;
   padding: 100px 0px;
+  text-align: center;
 }
 #landing-wrap {
   display: flex;
@@ -176,6 +177,7 @@ button {
   margin: 0 20px;
   flex-grow: 1;
   z-index: 5;
+  height: 25vh;
 }
 .home-content-item {
   border: 1px solid transparent;
@@ -197,6 +199,7 @@ button {
 }
 .thumb {
   max-height: 240px;
+  min-width: 50px;
 }
 
 /* -------------------- LISTA ------------------- */
@@ -456,5 +459,67 @@ button {
 /* ---------------------------- PHONE ---------------------------- */
 /* --------------------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  /* ------------------------- HOME ----------------------- */
+  h1 {
+    font-size: 28px;
+  }
+  #navbar-container {
+    display: none;
+  }
+  #navbar-container-mob {
+    background-color: white;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    height: auto;
+  }
+  #navbar-mob {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 5;
+    border-bottom: 1px solid black;
+    margin: 10px 20px 0px 20px;
+    background-color: white;
+  }
+  .nav-select {
+    width: 100%;
+  }
+
+  .home-content {
+    flex-direction: column;
+  }
+  #landing {
+    font-size: 32px;
+  }
+  .home-content {
+    height: auto;
+  }
+  .home-content-item {
+    flex-direction: column;
+    padding: 0 0 30px 0;
+  }
+  .home-content-item-half {
+    text-align: center;
+  }
+  .thumb-desc {
+    display: none;
+  }
+  /* ------------------------- APPUNTI LISTA ----------------------- */
+
+  #lista-container {
+    align-items: start;
+  }
+  .riga {
+    width: 100%;
+  }
+  .fila-copertine {
+    overflow-x: scroll;
+    gap: 10px;
+  }
+  .img-cover {
+    width: 160px;
+  }
 }
