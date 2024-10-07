@@ -467,10 +467,12 @@ button {
   h1 {
     font-size: 28px;
   }
+
   #navbar-container {
     display: none;
   }
   #navbar-container-mob {
+    display: block;
     background-color: white;
     width: 100vw;
     position: fixed;
