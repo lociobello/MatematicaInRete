@@ -63,7 +63,7 @@ function setSelectedOption() {
 
   if (currentPage.includes("index.html")) {
     select.value = "home";
-  } else if (currentPage.includes("appunti-lista.html")) {
+  } else if (currentPage.includes("appunti")) {
     select.value = "appunti";
   } else if (currentPage.includes("risorse-lista.html")) {
     select.value = "risorse";

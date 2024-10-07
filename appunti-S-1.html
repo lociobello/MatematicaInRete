@@ -29,6 +29,33 @@
         <a class="nav-btn" href="info.html">Info</a>
       </nav>
     </div>
+    <div id="navbar-container-mob">
+      <nav id="navbar-mob" class="navbar-mob">
+        <select class="nav-select" id="navSelect" onchange="navigate(this)">
+          <option value="home">Matematica in Rete</option>
+          <option value="appunti">Appunti di Matematica</option>
+          <option value="risorse">Altre risorse</option>
+          <option value="info">Info</option>
+        </select>
+      </nav>
+      <div class="navbar-mob-wrap">
+        <nav id="navbar-mob-2" class="navbar-mob secondaryNav-mob indirizzoNav-mob">
+          <select class="nav-select" id="navSelect-2" onchange="navigate(this)">
+            <option value="S">Scientifico</option>
+            <option value="U">Umanistico</option>
+          </select>
+        </nav>
+        <nav id="navbar-mob-3" class="navbar-mob secondaryNav-mob annoNav-mob">
+          <select class="nav-select" id="navSelect-3" onchange="navigate(this)">
+            <option value="year1">1</option>
+            <option value="year2">2</option>
+            <option value="year3">3</option>
+            <option value="year4">4</option>
+            <option value="year5">5</option>
+          </select>
+        </nav>
+      </div>
+    </div>
 
     <div id="libro-container">
       <div id="libro-cover">
