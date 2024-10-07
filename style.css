@@ -81,6 +81,9 @@ button {
   z-index: 4;
   height: auto;
 }
+#navbar-container-mob {
+  display: none;
+}
 
 #navbar {
   display: flex;
