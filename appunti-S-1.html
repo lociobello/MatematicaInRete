@@ -29,6 +29,7 @@
         <a class="nav-btn" href="info.html">Info</a>
       </nav>
     </div>
+
     <div id="navbar-container-mob">
       <nav id="navbar-mob" class="navbar-mob">
         <select class="nav-select" id="navSelect" onchange="navigate(this)">
@@ -40,20 +41,18 @@
       </nav>
       <div class="navbar-mob-wrap">
         <nav id="navbar-mob-2" class="navbar-mob secondaryNav-mob indirizzoNav-mob">
-          <select class="nav-select" id="navSelect-2" onchange="navigate(this)">
+          <select class="nav-select" id="navSelect-2" onchange="updatePage()">
             <option value="S">Scientifico</option>
             <option value="U">Umanistico</option>
           </select>
         </nav>
-        <nav id="navbar-mob-3" class="navbar-mob secondaryNav-mob annoNav-mob">
-          <select class="nav-select" id="navSelect-3" onchange="navigate(this)">
-            <option value="year1">1</option>
-            <option value="year2">2</option>
-            <option value="year3">3</option>
-            <option value="year4">4</option>
-            <option value="year5">5</option>
-          </select>
-        </nav>
+        <div class="years years-mob">
+          <button class="nav-btn-app numero active" onclick="navigateToPage(1)" id="yearMob1">1</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(2)" id="yearMob2">2</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(3)" id="yearMob3">3</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(4)" id="yearMob4">4</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(5)" id="yearMob5">5</button>
+        </div>
       </div>
     </div>
 

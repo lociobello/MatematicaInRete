@@ -30,6 +30,32 @@
       </nav>
     </div>
 
+    <div id="navbar-container-mob">
+      <nav id="navbar-mob" class="navbar-mob">
+        <select class="nav-select" id="navSelect" onchange="navigate(this)">
+          <option value="home">Matematica in Rete</option>
+          <option value="appunti">Appunti di Matematica</option>
+          <option value="risorse">Altre risorse</option>
+          <option value="info">Info</option>
+        </select>
+      </nav>
+      <div class="navbar-mob-wrap">
+        <nav id="navbar-mob-2" class="navbar-mob secondaryNav-mob indirizzoNav-mob">
+          <select class="nav-select" id="navSelect-2" onchange="updatePage()">
+            <option value="S">Scientifico</option>
+            <option value="U">Umanistico</option>
+          </select>
+        </nav>
+        <div class="years years-mob">
+          <button class="nav-btn-app numero active" onclick="navigateToPage(1)" id="yearMob1">1</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(2)" id="yearMob2">2</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(3)" id="yearMob3">3</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(4)" id="yearMob4">4</button>
+          <button class="nav-btn-app numero active" onclick="navigateToPage(5)" id="yearMob5">5</button>
+        </div>
+      </div>
+    </div>
+
     <div id="libro-container">
       <div id="libro-cover">
         <img src="assets/copertine/2024/high-res/U2.webp" class="libro-img" />

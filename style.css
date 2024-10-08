@@ -481,17 +481,23 @@ button {
     height: auto;
   }
   .navbar-mob {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
     z-index: 5;
     margin: 14px 14px 0px 14px;
     background-color: white;
+    flex-grow: 1;
   }
   .nav-select {
     width: 100%;
+    margin: 0;
+    margin-bottom: -1px;
   }
 
+  #container-home {
+    margin-bottom: 100px;
+  }
   .home-content {
     flex-direction: column;
   }
@@ -503,7 +509,11 @@ button {
   }
   .home-content-item {
     flex-direction: column;
-    padding: 0 0 30px 0;
+    padding: 10px 0 18px 0;
+    border: 1px solid black;
+  }
+  #home-content-item-half-last {
+    margin-top: -1px;
   }
   .home-content-item-half {
     text-align: center;
@@ -560,7 +570,7 @@ button {
     /* border-top: 1px solid black; */
   }
 
-  /* ------------------------- APPUNTI LISTA ----------------------- */
+  /* ------------------------- INFO ----------------------- */
 
   #progetto-container {
     flex-direction: column;
@@ -574,6 +584,7 @@ button {
   }
   #contatti {
     padding: 0;
+    margin-bottom: 200px;
   }
 
   /* ------------------------- PAGINA LIBRO ----------------------- */
@@ -592,6 +603,22 @@ button {
   .secondaryNav-mob {
     width: 50%;
   }
+  .active {
+    border-bottom: 1px solid black;
+  }
+  .numero {
+    width: 40px;
+    height: 40px;
+  }
+  #navSelect-2 {
+    height: 40px;
+  }
+  #navbar-mob-2 {
+    flex-grow: 1;
+  }
+  /* .years {
+    width: 50%;
+  } */
 
   #libro-container {
     flex-direction: column;
