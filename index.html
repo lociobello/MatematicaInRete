@@ -12,55 +12,66 @@
   </head>
 
   <body>
-    <div id="navbar-container">
-      <nav id="navbar">
-        <a class="nav-btn active">Matematica in Rete</a>
-        <a class="nav-btn" href="appunti-lista.html">Appunti di Matematica</a>
-        <a class="nav-btn" href="risorse-lista.html">Altre risorse</a>
-        <a class="nav-btn" href="info.html">Info</a>
-      </nav>
-    </div>
-
-    <div id="navbar-container-mob">
-      <nav id="navbar-mob" class="navbar-mob">
-        <select class="nav-select" id="navSelect" onchange="navigate(this)">
-          <option value="home">Matematica in Rete</option>
-          <option value="appunti">Appunti di Matematica</option>
-          <option value="risorse">Altre risorse</option>
-          <option value="info">Info</option>
-        </select>
-      </nav>
-    </div>
-
-    <div id="container-home">
-      <div id="landing-wrap">
-        <div id="landing">Libri e risorse <i>open source</i> sulla matematica<br />per studenti di licei scientifici ed umanistici</div>
-        <div id="gradient"></div>
-        <div id="canvas"></div>
+    <div class="main-container">
+      <div id="navbar-container">
+        <nav id="navbar">
+          <a class="nav-btn active">Matematica in Rete</a>
+          <a class="nav-btn" href="appunti-lista.html">Appunti di Matematica</a>
+          <a class="nav-btn" href="risorse-lista.html">Altre risorse</a>
+          <a class="nav-btn" href="info.html">Info</a>
+        </nav>
       </div>
 
-      <div class="home-content">
-        <a href="appunti-lista.html" class="home-content-item">
-          <div class="home-content-item-half">
-            <h1>Appunti di Matematica</h1>
-            <p class="thumb-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus rem sunt aliquam doloribus nesciunt dolorem dolores excepturi quod alias
-              tempora. Aliquid quasi porro voluptas harum magnam voluptate vero nihil praesentium.
-            </p>
-          </div>
-          <div class="home-content-item-half thumb-wrap"><img class="thumb" src="assets/appunti-thumb.png" /></div>
-        </a>
-        <a href="risorse-lista.html" class="home-content-item" id="home-content-item-half-last">
-          <div class="home-content-item-half">
-            <h1>Altre risorse</h1>
-            <p class="thumb-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit vel dolor ullam praesentium non magni harum! Omnis, hic nulla! Id ab,
-              recusandae vitae delectus blanditiis non ad corrupti sapiente molestiae.
-            </p>
-          </div>
-          <div class="home-content-item-half thumb-wrap"><img class="thumb" src="assets/risorse-thumb.png" /></div>
-        </a>
+      <div id="navbar-container-mob">
+        <nav id="navbar-mob" class="navbar-mob">
+          <select class="nav-select" id="navSelect" onchange="navigate(this)">
+            <option value="home">Matematica in Rete</option>
+            <option value="appunti">Appunti di Matematica</option>
+            <option value="risorse">Altre risorse</option>
+            <option value="info">Info</option>
+          </select>
+        </nav>
       </div>
+
+      <div id="container-home">
+        <div id="landing-wrap">
+          <div id="landing">Libri e risorse <i>open source</i> sulla matematica<br />per studenti di licei scientifici ed umanistici</div>
+          <div id="gradient"></div>
+          <div id="canvas"></div>
+        </div>
+
+        <div class="home-content">
+          <a href="appunti-lista.html" class="home-content-item">
+            <div class="home-content-item-half">
+              <h1>Appunti di Matematica</h1>
+              <p class="thumb-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus rem sunt aliquam doloribus nesciunt dolorem dolores excepturi quod alias
+                tempora. Aliquid quasi porro voluptas harum magnam voluptate vero nihil praesentium.
+              </p>
+            </div>
+            <div class="home-content-item-half thumb-wrap"><img class="thumb" src="assets/appunti-thumb.png" /></div>
+          </a>
+          <a href="risorse-lista.html" class="home-content-item" id="home-content-item-half-last">
+            <div class="home-content-item-half">
+              <h1>Altre risorse</h1>
+              <p class="thumb-desc">
+                Attività laboratoriali e schede di lavoro ampiamente sperimentate in classi di liceo scientifico e classico, riguardanti sia la matematica che
+                la fisica. Alcune di queste attività sono state sviluppate nell’ambito del progetto della Regione Toscana
+                <i>Laboratori del Sapere Scientifico</i> e in collaborazione con il Museo Galileo di Firenze, il Dipartimento di Fisica e il Dipartimento di
+                Ingegneria dell’Università di Firenze e il Museo Paleontologico di Montevarchi.
+              </p>
+            </div>
+            <div class="home-content-item-half thumb-wrap"><img class="thumb" src="assets/risorse-thumb.png" /></div>
+          </a>
+        </div>
+      </div>
+      <footer>
+        <div>
+          <p>2024 - Matematica in Rete</p>
+          <a>CC BY-NC-SA 4.0</a>
+        </div>
+        <a href="mailto:info@matematicainrete.it">info@matematicainrete.it</a>
+      </footer>
     </div>
 
     <script src="sketch-2.js"></script>

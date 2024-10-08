@@ -37,42 +37,56 @@ function navigateToPage(year) {
 
 //-------- APPUNTI DROPDOWN - MOBILE
 
-// Get current page URL to determine active selection
-document.addEventListener("DOMContentLoaded", function () {
-  const indirizzoSelect = document.getElementById("navSelect-2");
-  const currentPage = window.location.href.split("-");
-  const currentIndirizzo = currentPage[1];
-  const currentYear = currentPage[2].charAt(0);
-
-  // Set the selected indirizzo and highlight the active year button
-  indirizzoSelect.value = currentIndirizzo;
-  const activeButton = document.getElementById("yearMob" + currentYear);
-  activeButton.classList.add("attivo");
-
-  // Set the background color based on indirizzo
-  if (currentIndirizzo === "S") {
-    activeButton.classList.add("scientifico");
-  } else if (currentIndirizzo === "U") {
-    activeButton.classList.add("umanistico");
-  }
-});
+// Function to check if navbar-container-mob is visible
+function isNavbarVisible() {
+  const navbarContainerMob = document.getElementById("navbar-container-mob");
+  return navbarContainerMob && window.getComputedStyle(navbarContainerMob).display !== "none";
+}
 
 // Update page when indirizzo (school type) is changed
-function updatePage() {
-  const indirizzo = document.getElementById("navSelect-2").value;
-  const activeYear = document.querySelector(".years button.attivo").innerText;
-  const newPage = "appunti-" + indirizzo + "-" + activeYear + ".html";
-  window.location.href = newPage;
+function updatePageMob() {
+  if (isNavbarVisible()) {
+    const indirizzo = document.getElementById("navSelect-2").value;
+    const activeYear = document.querySelector(".years button.attivo").innerText;
+    const newPage = "appunti-" + indirizzo + "-" + activeYear + ".html";
+    window.location.href = newPage;
+  }
 }
 
 // Update page when a year is clicked
-function navigateToPage(year) {
-  const indirizzo = document.getElementById("navSelect-2").value;
-  const newPage = "appunti-" + indirizzo + "-" + year + ".html";
-  window.location.href = newPage;
+function navigateToPageMob(year) {
+  if (isNavbarVisible()) {
+    const indirizzo = document.getElementById("navSelect-2").value;
+    const newPage = "appunti-" + indirizzo + "-" + year + ".html";
+    window.location.href = newPage;
+  }
 }
 
-//---------MOBILE DROPDOWN
+// Initial logic when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  if (isNavbarVisible()) {
+    const indirizzoSelect = document.getElementById("navSelect-2");
+    const currentPage = window.location.href.split("-");
+    const currentIndirizzo = currentPage[1];
+    const currentYear = currentPage[2].charAt(0);
+
+    // Set the selected indirizzo and highlight the active year button
+    indirizzoSelect.value = currentIndirizzo;
+    const activeButton = document.getElementById("yearMob" + currentYear);
+    if (activeButton) {
+      activeButton.classList.add("attivo");
+
+      // Set the background color based on indirizzo
+      if (currentIndirizzo === "S") {
+        activeButton.classList.add("scientifico");
+      } else if (currentIndirizzo === "U") {
+        activeButton.classList.add("umanistico");
+      }
+    }
+  }
+});
+
+//---------MOBILE NAV
 
 // Function to handle navigation
 function navigate(select) {

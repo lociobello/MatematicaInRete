@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight * 0.75);
+  canvas = createCanvas(windowWidth, windowHeight * 0.6);
   canvas.parent("canvas");
   // background(255);
 }
@@ -44,5 +44,5 @@ function mouseClicked() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight * 0.75);
+  resizeCanvas(windowWidth, windowHeight * 0.6);
 }

@@ -43,7 +43,15 @@ img {
 }
 ol {
   margin: 0;
-  padding-left: 20px;
+  counter-reset: item;
+}
+li {
+  display: block;
+  content: ".";
+}
+li::before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
 }
 select,
 option {
@@ -71,15 +79,42 @@ button {
   cursor: pointer;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  border-top: 1px solid black;
+  margin: 40px 20px 20px 20px;
+  justify-content: space-between;
+  padding-top: 6px;
+  position: relative;
+}
+footer p {
+  font-size: 16px;
+  font-family: helvetica;
+}
+footer a {
+  font-family: helvetica;
+  text-decoration: underline;
+}
+
 /* ------------------------- HOME ----------------------- */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 #navbar-container {
   background-color: white;
-  width: 100vw;
+  /* display: flex; */
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 4;
   height: auto;
+  width: 100%;
 }
 #navbar-container-mob {
   display: none;
@@ -93,6 +128,8 @@ button {
   border-bottom: 1px solid black;
   margin: 10px 20px 0px 20px;
   background-color: white;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
 }
 .nav-btn {
   font-size: 20px;
@@ -133,6 +170,7 @@ button {
 #container-home {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 #canvas {
@@ -159,7 +197,7 @@ button {
   flex-grow: 2;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 60vh;
 }
 #landing-mobile {
   display: none;
@@ -186,6 +224,7 @@ button {
   border: 1px solid transparent;
   display: flex;
   padding: 8px 14px;
+  flex: 1;
   /* height: 250px; */
 }
 .home-content-item:hover {
@@ -204,10 +243,13 @@ button {
   max-height: 240px;
   min-width: 50px;
 }
-
+/* #home-content-item-half-last {
+  opacity: 30%;
+} */
 /* -------------------- LISTA ------------------- */
 
 .page-container {
+  flex: 1;
   margin: 60px 20px 20px 20px;
 }
 
@@ -256,7 +298,6 @@ button {
 }
 #riga-u {
   margin-top: 24px;
-  margin-bottom: 60px;
 }
 
 /* ------------------------- INFO ---------------------- */
@@ -265,6 +306,7 @@ button {
   display: flex;
   margin-top: 65px;
   padding: 0 24px;
+  flex: 1;
 }
 .progetto-testo {
   display: flex;
@@ -300,22 +342,12 @@ button {
   opacity: 50%;
   transition: 0.1s;
 }
-#footer {
-  font-size: 16px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-#footer a {
-  font-family: serif;
-  text-underline-offset: 0.1em;
-}
 
 .credits-item {
   flex-basis: 50%;
   margin-bottom: 24px;
 }
 .progetto-testo a {
-  /* font-family: helvetica; */
   text-decoration: underline;
 }
 .sottotitolo {
@@ -351,9 +383,6 @@ button {
   height: 160px;
   justify-content: space-between;
 }
-.button {
-  width: fit-content;
-}
 .titolo {
   margin: 0;
   font-family: helvetica;
@@ -388,6 +417,8 @@ button {
   color: rgb(30, 126, 236);
 }
 .button {
+  width: fit-content;
+  margin-bottom: 20px;
   font-family: helvetica;
   font-weight: 400;
   font-size: 20px;
@@ -412,17 +443,18 @@ button {
 .libro-info {
   flex-basis: 50%;
 }
-/* .descrizione {
-  margin-top: 10px;
-} */
 .capitoli {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
 }
-/* .capitoli-lista {
-  margin-top: 10px;
-} */
+.ol-main {
+  padding-left: 0px;
+}
+.ol-indent {
+  padding-left: 24px;
+}
+
 .appunti-wrap {
   display: flex;
   flex-wrap: nowrap;
@@ -474,6 +506,11 @@ button {
     border: 1px solid black;
   }
 
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   #navbar-container {
     display: none;
   }
@@ -487,9 +524,6 @@ button {
     height: auto;
   }
   .navbar-mob {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
     z-index: 5;
     margin: 14px 14px 0px 14px;
     background-color: white;
@@ -501,9 +535,6 @@ button {
     margin-bottom: -1px;
   }
 
-  #container-home {
-    margin-bottom: 100px;
-  }
   .home-content {
     flex-direction: column;
   }
@@ -531,8 +562,6 @@ button {
 
   .page-container {
     margin: 60px 0px 0px 0px;
-    /* padding: 0px 14px 0 14px; */
-    /* position: relative; */
   }
 
   #lista-container {
@@ -548,13 +577,11 @@ button {
     padding: 0px 14px;
     overflow-x: scroll;
     gap: 10px;
-    /* padding: 0 14px; */
   }
 
   .riga {
     width: 100%;
     overflow: visible;
-    /* margin: 0 14px; */
     border: none;
   }
   #riga-u {
@@ -573,7 +600,6 @@ button {
   .lista-titolo {
     padding: 6px 0px 14px 0;
     margin: 0 14px;
-    /* border-top: 1px solid black; */
   }
 
   /* ------------------------- INFO ----------------------- */
@@ -590,7 +616,7 @@ button {
   }
   #contatti {
     padding: 0;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 
   /* ------------------------- PAGINA LIBRO ----------------------- */
@@ -622,9 +648,6 @@ button {
   #navbar-mob-2 {
     flex-grow: 1;
   }
-  /* .years {
-    width: 50%;
-  } */
 
   #libro-container {
     flex-direction: column;

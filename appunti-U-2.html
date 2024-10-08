@@ -8,89 +8,121 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div id="navbar-container">
-      <nav id="navbar">
-        <a class="nav-btn" href="index.html">Matematica in Rete</a>
-        <div class="appunti-wrap">
-          <a class="nav-btn-app active" href="appunti-lista.html">Appunti di Matematica</a>
-          <select class="nav-select" id="indirizzoSelect" onchange="updatePage()">
-            <option value="U">Indirizzo Umanistico</option>
-            <option value="S">Indirizzo Scientifico</option>
-          </select>
-          <div class="years">
-            <button class="nav-btn-app numero active" onclick="navigateToPage(1)" id="year1">1</button>
-            <button class="nav-btn-app numero active" onclick="navigateToPage(2)" id="year2">2</button>
-            <button class="nav-btn-app numero active" onclick="navigateToPage(3)" id="year3">3</button>
-            <button class="nav-btn-app numero active" onclick="navigateToPage(4)" id="year4">4</button>
-            <button class="nav-btn-app numero active" onclick="navigateToPage(5)" id="year5">5</button>
+    <div class="main-container">
+      <div id="navbar-container">
+        <nav id="navbar">
+          <a class="nav-btn" href="index.html">Matematica in Rete</a>
+          <div class="appunti-wrap">
+            <a class="nav-btn-app active" href="appunti-lista.html">Appunti di Matematica</a>
+            <select class="nav-select" id="indirizzoSelect" onchange="updatePage()">
+              <option value="U">Indirizzo Umanistico</option>
+              <option value="S">Indirizzo Scientifico</option>
+            </select>
+            <div class="years">
+              <button class="nav-btn-app numero active" onclick="navigateToPage(1)" id="year1">1</button>
+              <button class="nav-btn-app numero active" onclick="navigateToPage(2)" id="year2">2</button>
+              <button class="nav-btn-app numero active" onclick="navigateToPage(3)" id="year3">3</button>
+              <button class="nav-btn-app numero active" onclick="navigateToPage(4)" id="year4">4</button>
+              <button class="nav-btn-app numero active" onclick="navigateToPage(5)" id="year5">5</button>
+            </div>
           </div>
-        </div>
-        <a class="nav-btn" href="risorse-lista.html">Altre risorse</a>
-        <a class="nav-btn" href="info.html">Info</a>
-      </nav>
-    </div>
+          <a class="nav-btn" href="risorse-lista.html">Altre risorse</a>
+          <a class="nav-btn" href="info.html">Info</a>
+        </nav>
+      </div>
 
-    <div id="navbar-container-mob">
-      <nav id="navbar-mob" class="navbar-mob">
-        <select class="nav-select" id="navSelect" onchange="navigate(this)">
-          <option value="home">Matematica in Rete</option>
-          <option value="appunti">Appunti di Matematica</option>
-          <option value="risorse">Altre risorse</option>
-          <option value="info">Info</option>
-        </select>
-      </nav>
-      <div class="navbar-mob-wrap">
-        <nav id="navbar-mob-2" class="navbar-mob secondaryNav-mob indirizzoNav-mob">
-          <select class="nav-select" id="navSelect-2" onchange="updatePage()">
-            <option value="S">Scientifico</option>
-            <option value="U">Umanistico</option>
+      <div id="navbar-container-mob">
+        <nav id="navbar-mob" class="navbar-mob">
+          <select class="nav-select" id="navSelect" onchange="navigate(this)">
+            <option value="home">Matematica in Rete</option>
+            <option value="appunti">Appunti di Matematica</option>
+            <option value="risorse">Altre risorse</option>
+            <option value="info">Info</option>
           </select>
         </nav>
-        <div class="years years-mob">
-          <button class="nav-btn-app numero active" onclick="navigateToPage(1)" id="yearMob1">1</button>
-          <button class="nav-btn-app numero active" onclick="navigateToPage(2)" id="yearMob2">2</button>
-          <button class="nav-btn-app numero active" onclick="navigateToPage(3)" id="yearMob3">3</button>
-          <button class="nav-btn-app numero active" onclick="navigateToPage(4)" id="yearMob4">4</button>
-          <button class="nav-btn-app numero active" onclick="navigateToPage(5)" id="yearMob5">5</button>
+        <div class="navbar-mob-wrap">
+          <nav id="navbar-mob-2" class="navbar-mob secondaryNav-mob indirizzoNav-mob">
+            <select class="nav-select" id="navSelect-2" onchange="updatePageMob()">
+              <option value="S">Scientifico</option>
+              <option value="U">Umanistico</option>
+            </select>
+          </nav>
+          <div class="years years-mob">
+            <button class="nav-btn-app numero active" onclick="navigateToPageMob(1)" id="yearMob1">1</button>
+            <button class="nav-btn-app numero active" onclick="navigateToPageMob(2)" id="yearMob2">2</button>
+            <button class="nav-btn-app numero active" onclick="navigateToPageMob(3)" id="yearMob3">3</button>
+            <button class="nav-btn-app numero active" onclick="navigateToPageMob(4)" id="yearMob4">4</button>
+            <button class="nav-btn-app numero active" onclick="navigateToPageMob(5)" id="yearMob5">5</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="libro-container">
-      <div id="libro-cover">
-        <img src="assets/copertine/2024/high-res/U2.webp" class="libro-img" />
-      </div>
-      <div id="libro-testo">
-        <div class="libro-top">
-          <div class="libro-titolo">
-            <h1 class="title">Appunti di Matematica 2</h1>
-            <h2 class="lista-titolo">Indirizzo Umanistico</h2>
-          </div>
-          <a href="#" class="button">Download</a>
+      <div id="libro-container">
+        <div id="libro-cover">
+          <img src="assets/copertine/2024/high-res/U2.webp" class="libro-img" />
         </div>
-        <div class="libro-descrizione">
-          <div class="libro-info">
-            <h2>Descrizione</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit pellentesque morbi nunc. Sodales suspendisse lacus, neque in porta
-              hendrerit euismod tellus pellentesque. Suspendisse vel, quam fermentum volutpat aliquet. Urna, arcu turpis nibh erat diam at lorem sed sem.
-            </p>
+        <div id="libro-testo">
+          <div class="libro-top">
+            <div class="libro-titolo">
+              <h1 class="title">Appunti di Matematica 2</h1>
+              <h2 class="lista-titolo">Indirizzo Umanistico</h2>
+            </div>
+            <a href="#" class="button">Download</a>
           </div>
-          <div class="capitoli">
-            <h2>Capitoli</h2>
-            <ol class="capitoli-lista">
-              <li>&nbsp;Insiemi numerici</li>
-              <li>&nbsp;Insiemi e funzioni</li>
-              <li>&nbsp;Calcolo letterale</li>
-              <li>&nbsp;Equazioni di primo grado</li>
-              <li>&nbsp;Disequazioni di primo grado</li>
-              <li>&nbsp;Introduzione alla statistica</li>
-              <li>&nbsp;Geometria euclidea</li>
-              <li>&nbsp;Laboratorio di informatica</li>
-            </ol>
+          <div class="libro-descrizione">
+            <!-- <div class="libro-info">
+              <h2>Descrizione</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit pellentesque morbi nunc. Sodales suspendisse lacus, neque in
+                porta hendrerit euismod tellus pellentesque. Suspendisse vel, quam fermentum volutpat aliquet. Urna, arcu turpis nibh erat diam at lorem sed
+                sem.
+              </p>
+            </div> -->
+            <div class="capitoli">
+              <h2>Capitoli</h2>
+              <ol class="ol-main">
+                <li>&nbsp;Insiemi numerici</li>
+                <ol class="ol-indent">
+                  <li>&nbsp;Numeri naturali</li>
+                  <li>&nbsp;Numeri interi</li>
+                  <li>&nbsp;Numeri razionali</li>
+                </ol>
+                <li>&nbsp;Insiemi e funzioni</li>
+                <ol class="ol-indent">
+                  <li>&nbsp;Insiemi</li>
+                  <li>&nbsp;Funzioni</li>
+                </ol>
+                <li>&nbsp;Calcolo letterale</li>
+                <ol class="ol-indent">
+                  <li>&nbsp;Monomi</li>
+                  <li>&nbsp;Polinomi</li>
+                  <li>&nbsp;Scomposizione dei polinomi</li>
+                  <li>&nbsp;Frazioni algebriche</li>
+                </ol>
+                <li>&nbsp;Equazioni di primo grado</li>
+                <li>&nbsp;Disequazioni di primo grado</li>
+                <li>&nbsp;Introduzione alla statistica</li>
+                <li>&nbsp;Geometria euclidea</li>
+                <ol class="ol-indent">
+                  <li>&nbsp;Introduzione</li>
+                  <li>&nbsp;Triangoli</li>
+                  <li>&nbsp;Rette perpendicolari e parallele. Proprietà dei triangoli e dei poligoni</li>
+                  <li>&nbsp;Quadrilateri</li>
+                  <li>&nbsp;Isometrie</li>
+                </ol>
+                <li>&nbsp;Laboratorio di informatica</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
+      <footer>
+        <div>
+          <p>2024 - Matematica in Rete</p>
+          <a>CC BY-NC-SA 4.0</a>
+        </div>
+        <a href="mailto:info@matematicainrete.it">info@matematicainrete.it</a>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
