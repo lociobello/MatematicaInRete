@@ -444,7 +444,7 @@ footer a {
   flex-basis: 50%;
 }
 .capitoli {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   display: flex;
   flex-direction: column;
 }
