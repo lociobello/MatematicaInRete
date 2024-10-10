@@ -218,7 +218,7 @@ footer a {
   margin: 0 20px;
   flex-grow: 1;
   z-index: 5;
-  height: 25vh;
+  /* height: 25vh; */
 }
 .home-content-item {
   border: 1px solid transparent;
@@ -243,9 +243,7 @@ footer a {
   max-height: 240px;
   min-width: 50px;
 }
-/* #home-content-item-half-last {
-  opacity: 30%;
-} */
+
 /* -------------------- LISTA ------------------- */
 
 .page-container {
@@ -537,12 +535,10 @@ footer a {
 
   .home-content {
     flex-direction: column;
+    height: auto;
   }
   #landing {
     font-size: 32px;
-  }
-  .home-content {
-    height: auto;
   }
   .home-content-item {
     flex-direction: column;
