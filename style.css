@@ -217,7 +217,7 @@ footer a {
   background-color: white;
   margin: 0 20px;
   flex-grow: 1;
-  z-index: 5;
+  z-index: 3;
   gap: 20px;
 }
 .home-content-item {
@@ -538,6 +538,8 @@ footer a {
   .home-content {
     flex-direction: column;
     height: auto;
+    gap: unset;
+    margin: 0 14px;
   }
   #landing {
     font-size: 32px;
