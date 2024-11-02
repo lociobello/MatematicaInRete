@@ -105,7 +105,18 @@ footer a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* position: relative; */
 }
+
+/* #video-bg {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+} */
 
 #navbar-container {
   background-color: white;
@@ -188,7 +199,7 @@ footer a {
 #landingText {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 #landingTitle {
   font-family: sans-serif;
@@ -198,7 +209,7 @@ footer a {
   text-align: center;
 }
 #landingSub {
-  font-size: 32px;
+  font-size: 20px;
   /* margin: 41px 20px 0px 20px; */
   /* padding: 100px 0px; */
   text-align: center;
