@@ -156,7 +156,7 @@ let scientifico;
 let umanistico;
 
 let scribblesArray = [];
-let displayTime = 10000; // 10 seconds in milliseconds
+let displayTime = 20000; // 10 seconds in milliseconds
 let currentScribbleIndex = 0; // To track the current index of the scribbles array
 
 function preload() {
@@ -177,7 +177,7 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight * 0.6);
+  canvas = createCanvas(windowWidth, windowHeight * 0.8);
   canvas.parent("canvas");
 }
 
@@ -189,7 +189,7 @@ function draw() {
   imageMode(CENTER);
 
   // Add a new scribble with random properties each second
-  if (frameCount % 60 == 0) {
+  if (frameCount % 120 == 0) {
     let randomRotation = random(-PI / 6, PI / 6);
     let position = getRandomNonOverlappingPosition(scribbles[currentScribbleIndex].width / 2, scribbles[currentScribbleIndex].height / 2);
 
@@ -223,7 +223,7 @@ function draw() {
       push();
       translate(scribble.x, scribble.y);
       rotate(scribble.rotation);
-      image(scribble.img, 0, 0, scribble.img.width / 2, scribble.img.height / 2);
+      image(scribble.img, 0, 0, scribble.img.width / 1.5, scribble.img.height / 1.5);
       pop();
     }
   }
@@ -238,7 +238,7 @@ function getRandomNonOverlappingPosition(scribbleWidth, scribbleHeight) {
     let isOverlapping = false;
     for (let scribble of scribblesArray) {
       let distance = dist(randomX, randomY, scribble.x, scribble.y);
-      let minDistance = (scribbleWidth + scribble.img.width / 2) / 2; // Minimum distance between the centers of images
+      let minDistance = (scribbleWidth + scribble.img.width / 1.5) / 2; // Minimum distance between the centers of images
 
       if (distance < minDistance) {
         isOverlapping = true;
