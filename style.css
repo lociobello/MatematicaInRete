@@ -375,7 +375,13 @@ footer a {
   margin-bottom: 24px;
 }
 .progetto-testo a {
+  font-family: sans-serif;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+.progetto-testo a:hover {
+  opacity: 0.4;
 }
 .sottotitolo {
   margin-bottom: 10px;
