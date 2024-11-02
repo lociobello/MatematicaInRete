@@ -185,10 +185,22 @@ footer a {
   height: 100px;
   bottom: 0px;
 }
-#landing {
+#landingText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#landingTitle {
+  font-family: sans-serif;
   font-size: 40px;
-  margin: 41px 20px 0px 20px;
-  padding: 100px 0px;
+  /* margin: 41px 20px 0px 20px; */
+  /* padding: 100px 0px; */
+  text-align: center;
+}
+#landingSub {
+  font-size: 32px;
+  /* margin: 41px 20px 0px 20px; */
+  /* padding: 100px 0px; */
   text-align: center;
 }
 #landing-wrap {
@@ -198,7 +210,7 @@ footer a {
   flex-grow: 2;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
 }
 #landing-mobile {
   display: none;
@@ -206,7 +218,7 @@ footer a {
 .home-link {
   font-family: sans-serif;
   text-decoration: underline 3px;
-  text-underline-offset: 0.1em;
+  text-underline-offset: 0.2em;
 }
 .home-link:hover {
   opacity: 50%;
@@ -219,13 +231,17 @@ footer a {
   margin: 0 20px;
   flex-grow: 1;
   z-index: 3;
+  border-top: 1px solid black;
+  /* padding-top: 8px; */
   /* gap: 20px; */
 }
 .home-content-item {
   border: 1px solid transparent;
   display: flex;
-  padding: 8px 14px;
+  padding: 16px 14px;
   flex: 1;
+  margin-top: -1px;
+
   /* height: 250px; */
 }
 .home-content-item:hover {
@@ -253,15 +269,25 @@ footer a {
   flex: 1;
   margin: 60px 20px 20px 20px;
 }
+.title-block {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 16px;
+}
 
 .title {
   font-family: sans-serif;
   font-size: 32px;
   font-weight: 400;
   margin: 0;
+  flex: 1;
 }
-.title-block {
-  height: 100px;
+.desc {
+  flex: 1;
+  padding-bottom: 16px;
+}
+.riga-mob {
+  display: none;
 }
 
 #lista-container {
@@ -336,8 +362,8 @@ footer a {
   font-size: 20px;
 }
 #contatti a {
-  text-decoration: underline 2px;
-  text-underline-offset: 0.1em;
+  text-decoration: underline 1px;
+  text-underline-offset: 0.2em;
 }
 #contatti a:hover {
   opacity: 50%;
@@ -365,6 +391,14 @@ footer a {
 #libro-cover {
   flex-basis: 33.3%;
 }
+.titolo-libro {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+  flex: 1;
+}
+
 #libro-testo {
   flex-basis: 66.67%;
   padding-bottom: 40px;
@@ -375,13 +409,13 @@ footer a {
 }
 
 .libro-img {
-  max-height: 100vh;
+  max-height: 90vh;
   max-width: 100%;
 }
 .libro-top {
   display: flex;
   flex-direction: column;
-  height: 160px;
+  height: 140px;
   justify-content: space-between;
 }
 .titolo {
@@ -395,7 +429,7 @@ footer a {
   font-family: sans-serif;
   font-size: 22px;
   text-decoration: underline 2px;
-  text-underline-offset: 0.1em;
+  text-underline-offset: 0.2em;
   cursor: pointer;
 }
 .links a:hover {
@@ -444,13 +478,44 @@ footer a {
 .libro-info {
   flex-basis: 50%;
 }
-.capitoli {
-  /* flex-basis: 50%; */
+.downloadPart {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  padding-bottom: 16px;
 }
+.downloadPart a {
+  font-family: sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.s a:hover {
+  color: #ff7a00;
+}
+.s li:hover {
+  color: #ff7a00;
+}
+.u a:hover {
+  color: rgb(30, 126, 236);
+}
+.u li:hover {
+  color: rgb(30, 126, 236);
+}
+
+.downloadPart h2 {
+  padding-bottom: 2px;
+}
+
 .ol-main {
   padding-left: 0px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+}
+.ol-main li {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
 }
 .ol-indent {
   padding-left: 24px;
@@ -585,6 +650,13 @@ footer a {
     overflow: visible;
     border: none;
   }
+  .riga-mob {
+    display: block;
+    height: 1px;
+    flex: 1;
+    border-top: 1px solid black;
+    margin: 0 14px;
+  }
   #riga-u {
     margin: 0;
   }
@@ -595,8 +667,13 @@ footer a {
   }
   .title-block {
     margin: 0px 14px;
-    height: 80px;
+    /* display: none; */
+  }
+  .title {
     display: none;
+  }
+  .desc {
+    padding-top: 8px;
   }
   .lista-titolo {
     padding: 6px 0px 14px 0;
